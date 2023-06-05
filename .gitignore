@@ -1,0 +1,14 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+/.metadata/
+=======
+.vscode/
+>>>>>>> 21f9ba2011ea57562e1707af389fdee83e911baa
+.gitignore
+=======
+/.idea/.gitignore
+/.idea/misc.xml
+/.idea/modules.xml
+/.idea/TeamProject.iml
+/.idea/vcs.xml
+>>>>>>> 99d5c51ce5d384d702656a909afb1d5bdb65614c
