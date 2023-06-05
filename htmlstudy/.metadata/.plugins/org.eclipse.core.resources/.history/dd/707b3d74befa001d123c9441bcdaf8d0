@@ -1,5 +1,0 @@
-@charset "UTF-8";
-img{
-	border-color: red;
-	border: 15px dotted;
-}

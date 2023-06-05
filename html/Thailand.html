@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <style>
+      #main {
+        background-image: url("../images/3.jfif");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+      }
+      table {
+        border: 3px solid;
+        border-collapse: collapse;
+        width: 700px;
+      }
+      td {
+        background-color: darkslategray;
+        text-align: center;
+        border: 2px solid;
+      }
+      #메뉴,
+      #위치,
+      #국기 {
+        background-color: darkslateblue;
+        color: white;
+        font-weight: bold;
+      }
+      img {
+        width: 350px;
+        height: 100%;
+        object-fit: cover;
+      }
+      #소개제목 {
+        width: 10px;
+        background-color: darkslateblue;
+        color: white;
+        font-weight: bold;
+      }
+      #소개 {
+        background-color: white;
+        text-align: left;
+        padding-left: 30px;
+      }
+      #preview {
+        z-index: 9999;
+        position: absolute;
+        border: 0px solid #ccc;
+        background: #333;
+        padding: 1px;
+        display: none;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main" align="center">
+      <h1>태국 Thailand</h1>
+      <table>
+        <tr>
+          <td id="위치">위치</td>
+          <td id="국기">국기</td>
+        </tr>
+        <tr>
+          <td>
+            <a href="../images/1.webp" target="_blank"
+              ><img src="../images/1.webp"
+            /></a>
+          </td>
+          <td><img class="thumbnail" src="../images/2.svg" /></td>
+        </tr>
+        <tr>
+          <td id="메뉴" colspan="2">수도 (방콕)</td>
+        </tr>
+        <tr>
+          <td id="메뉴" colspan="2">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124021.07195550262!2d100.4568424956877!3d13.739113703232805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x311d6032280d61f3%3A0x10100b25de24820!2z7YOc6rWtIOuwqey9lSDrj4Tsi5zqtowg67Cp7L2V!5e0!3m2!1sko!2skr!4v1685686095043!5m2!1sko!2skr"
+              width="100%"
+              height="400px"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </td>
+        </tr>
+        <tr>
+          <td id="메뉴" colspan="2">소개</td>
+        </tr>
+        <tr>
+          <td id="소개" colspan="2">
+            언어: 타이어 <br />
+            화폐단위: 태국 밧(THB, ฿) <br />
+            면적: 5,131만 2천ha 세계51위<br />
+            인구: 7,180만 1,279명 세계20위<br />
+            GDP: 5,059억 8,166만 달러 세계25위<br />
+            기후: 대부분은 열대 사바나기후<br />
+            종교: 불교 95%, 이슬람 4%, 기독교 1%<br />
+          </td>
+        </tr>
+      </table>
+    </div>
+    <script type="text/javascript">
+      $(function () {
+        var xOffset = 10;
+        var yOffset = 30;
+
+        $(document).on("mouseover", ".thumbnail", function (e) {
+          //마우스 오버시
+
+          // $("body").append("<p id='preview'><img src='" + $(this).attr("src") + "' width='400px' /></p>");
+          $("body").append(
+            "<p id='preview'>태국 국기의 이름은 통 뜨라이롱 입니다.</p>"
+          );
+          $("#preview")
+            .css("top", e.pageY - xOffset + "px")
+            .css("left", e.pageX + yOffset + "px")
+            .fadeIn("fast"); //미리보기 화면 설정 셋팅
+        });
+
+        $(document).on("mousemove", ".thumbnail", function (e) {
+          //마우스 이동시
+          $("#preview")
+            .css("top", e.pageY - xOffset + "px")
+            .css("left", e.pageX + yOffset + "px");
+        });
+
+        $(document).on("mouseout", ".thumbnail", function () {
+          //마우스 아웃시
+          $("#preview").remove();
+        });
+
+        $(document).on("click", "#위치", function () {
+          alert("비행기타고 6시간이나 걸립니다.");
+        });
+        $("#국기").on("click", function () {
+          alert("하하하하하하");
+        });
+      });
+    </script>
+  </body>
+</html>
