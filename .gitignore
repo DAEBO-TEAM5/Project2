@@ -1,5 +1,10 @@
+<<<<<<< HEAD
+.vscode/
+.gitignore
+=======
 /.idea/.gitignore
 /.idea/misc.xml
 /.idea/modules.xml
 /.idea/TeamProject.iml
 /.idea/vcs.xml
+>>>>>>> 99d5c51ce5d384d702656a909afb1d5bdb65614c
