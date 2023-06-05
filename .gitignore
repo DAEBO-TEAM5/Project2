@@ -1,5 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+/.metadata/
+=======
 .vscode/
+>>>>>>> 21f9ba2011ea57562e1707af389fdee83e911baa
 .gitignore
 =======
 /.idea/.gitignore
