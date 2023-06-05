@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>브라질</title>
+    <link href="../css/brazil.css" rel="stylesheet" type="text/css" />
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+  </head>
+
+  <body>
+    <div id="main" align="center">
+      <h1>브라질 브라브라</h1>
+
+      <nav class="navi">
+        <ul>
+          <li><a href="#국기">국기</a></li>
+          <li><a href="#수도">수도</a></li>
+          <li><a href="#화폐">화폐</a></li>
+          <li><a href="#언어">언어</a></li>
+          <li><a href="#인구">인구</a></li>
+          <li><a href="#면적">면적</a></li>
+          <li>
+            <a href="https://flight.naver.com/" target="_blank">항공예약</a>
+          </li>
+        </ul>
+        <br />
+        <p></p>
+        <hr />
+      </nav>
+
+      <table>
+        <tr>
+          <td><h3 id="국기">국기</h3></td>
+          <td><h3 id="수도">수도</h3></td>
+        </tr>
+        <tr>
+          <td><img src="../images/1브라질국기.jpg" /><br />아 아우리베르지</td>
+          <td>
+            <img id="brz" src="../images/2브라질사진.jpg" /><br />브라질리아
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan="2"><h3 id="위치">위치</h3></td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <a id="map"
+              ><iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31656393.25477952!2d-51.316680000000005!3d-14.40952615!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9c59c7ebcc28cf%3A0x295a1506f2293e63!2z67iM65287KeI!5e0!3m2!1sko!2skr!4v1685697053233!5m2!1sko!2skr"
+                width="600"
+                height="450"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe
+            ></a>
+          </td>
+        </tr>
+
+        <tr>
+          <td><h3 id="화폐">화폐</h3></td>
+          <td><h3 id="언어">언어</h3></td>
+        </tr>
+        <tr>
+          <td>브라질 헤알(BRL, R$)</td>
+          <td>포르투갈어, 스페인어</td>
+        </tr>
+
+        <tr>
+          <td><h3 id="인구">인구</h3></td>
+          <td><h3 id="면적">면적</h3></td>
+        </tr>
+        <tr>
+          <td>2억 1,642만 2,446명 세계7위</td>
+          <td>8억 5,157만 7천㏊ 세계5위</td>
+        </tr>
+      </table>
+
+      <hr />
+      <p></p>
+    </div>
+    <script type="text/javascript">
+      $(function () {
+        $(document).on("click", "#brz", function () {
+          alert("이곳은 브라질리아 대성당입니다.");
+        });
+      });
+    </script>
+  </body>
+</html>

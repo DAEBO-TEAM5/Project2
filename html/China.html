@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <style>
+      #main {
+        background-image: url("../images/6.webp");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+      }
+      table {
+        border: 3px solid;
+        border-collapse: collapse;
+        width: 700px;
+      }
+      td {
+        background-color: darkslategray;
+        text-align: center;
+        border: 2px solid;
+      }
+      #메뉴,
+      #위치,
+      #국기 {
+        background-color: darkslateblue;
+        color: white;
+        font-weight: bold;
+      }
+      img {
+        width: 350px;
+        height: 100%;
+        object-fit: cover;
+      }
+      #소개제목 {
+        width: 10px;
+        background-color: darkslateblue;
+        color: white;
+        font-weight: bold;
+      }
+      #소개 {
+        background-color: white;
+        text-align: left;
+        padding-left: 30px;
+      }
+      #preview {
+        z-index: 9999;
+        position: absolute;
+        border: 0px solid #ccc;
+        background: #333;
+        padding: 1px;
+        display: none;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main" align="center">
+      <h1>중국 China</h1>
+      <table>
+        <tr>
+          <td id="위치">위치</td>
+          <td id="국기">국기</td>
+        </tr>
+        <tr>
+          <td>
+            <a href="../images/4.svg" target="_blank"
+              ><img src="../images/4.svg"
+            /></a>
+          </td>
+          <td><img class="thumbnail" src="../images/5.svg" /></td>
+        </tr>
+        <tr>
+          <td id="메뉴" colspan="2">수도 (베이징)</td>
+        </tr>
+        <tr>
+          <td id="메뉴" colspan="2">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d783141.9976675463!2d115.73807529136516!3d39.938069469784246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35f05296e7142cb9%3A0xb9625620af0fa98a!2z7KSR6rWtIOuyoOydtOynlSDsi5wg67Kg7J207KeV!5e0!3m2!1sko!2skr!4v1685693315087!5m2!1sko!2skr"
+              width="100%"
+              height="400"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </td>
+        </tr>
+        <tr>
+          <td id="메뉴" colspan="2">소개</td>
+        </tr>
+        <tr>
+          <td id="소개" colspan="2">
+            언어: 중국어 <br />
+            화폐단위: 위안(CNY, ¥) <br />
+            면적: 9억 6천만 1,290㏊ 세계4위<br />
+            인구: 14억 2,567만 1,352명 세계2위<br />
+            GDP: 17조 7,340억 6,265만 달러 세계2위<br />
+            기후: 최남단의 열대에서 서부의 건조기후<br />
+            종교: 유교(儒敎), 불교(佛敎), 도교(道敎)<br />
+          </td>
+        </tr>
+      </table>
+    </div>
+    <script type="text/javascript">
+      $(function () {
+        var xOffset = 10;
+        var yOffset = 30;
+
+        $(document).on("mouseover", ".thumbnail", function (e) {
+          //마우스 오버시
+
+          // $("body").append("<p id='preview'><img src='" + $(this).attr("src") + "' width='400px' /></p>");
+          $("body").append(
+            "<p id='preview'>중국 국기의 이름은 오성홍기 입니다.</p>"
+          );
+          $("#preview")
+            .css("top", e.pageY - xOffset + "px")
+            .css("left", e.pageX + yOffset + "px")
+            .fadeIn("fast"); //미리보기 화면 설정 셋팅
+        });
+
+        $(document).on("mousemove", ".thumbnail", function (e) {
+          //마우스 이동시
+          $("#preview")
+            .css("top", e.pageY - xOffset + "px")
+            .css("left", e.pageX + yOffset + "px");
+        });
+
+        $(document).on("mouseout", ".thumbnail", function () {
+          //마우스 아웃시
+          $("#preview").remove();
+        });
+
+        $(document).on("click", "#위치", function () {
+          alert("비행기타고 2시간이나 걸립니다.");
+        });
+        $("#국기").on("click", function () {
+          alert("하하하하하하");
+        });
+      });
+    </script>
+  </body>
+</html>
