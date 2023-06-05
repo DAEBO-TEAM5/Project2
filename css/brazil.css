@@ -1,0 +1,102 @@
+@charset "UTF-8";
+
+#main {
+  background-image: url("../images/브라질bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+body {
+  margin: auto;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+}
+
+h3 {
+  color: green;
+  text-align: center;
+}
+
+table {
+  width: 1180px;
+  margin: auto;
+}
+
+tr {
+  text-align: center;
+  background-color: white;
+}
+
+td {
+  font: 맑은 고딕;
+  font-size: 20px;
+  font-weight: 20px;
+  height: 100px;
+  border: 3px double black;
+}
+
+/*
+div {
+	width:100px;
+	height: 100px;
+	background-color: gray;
+	text-align: center;
+}
+*/
+img {
+  width: 500px;
+  height: 300px;
+  border: 3px double;
+  text-align: center;
+  object-fit: cover;
+}
+
+.navi {
+  background-color: rgb(244, 234, 138);
+  margin: auto;
+  /* margin: 10 15 20 5px;  */
+  width: 1180px;
+  height: 70px;
+}
+
+.navi ul {
+  list-style: none;
+  height: 40px;
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
+
+.navi ul li {
+  display: inline;
+  float: left;
+  font-size: 15px;
+}
+
+.navi a,
+.navi a:visited {
+  padding: 10px 5px 5px 35px; /* left top right bottom X  정답: top right bottom left  */
+  display: block;
+  color: rgb(100, 150, 100);
+  width: 120px;
+  text-decoration: none;
+}
+
+.navi a:hover,
+.navi a:active,
+.navi a:focus {
+  text-shadow: 0px 2px 2px #000;
+  color: rgb(148, 148, 148);
+}
+#contact_map {
+  width: 800px;
+  height: 500px;
+}
+
+#contact_map iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
