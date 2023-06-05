@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>미국</title>
+    <link href="../css/America.css" rel="stylesheet" type="text/css" />
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+  </head>
+
+  <body>
+    <div id="main" align="center">
+      <h1>미국</h1>
+      <nav class="navi">
+        <ul>
+          <li><a href="#국기">국기</a></li>
+          <li><a href="#수도">수도</a></li>
+          <li><a href="#화폐">화폐</a></li>
+          <li><a href="#언어">언어</a></li>
+          <li><a href="#인구">인구</a></li>
+          <li><a href="#면적">면적</a></li>
+          <li>
+            <a href="https://flight.naver.com/" target="_blank">항공예약</a>
+          </li>
+        </ul>
+        <br />
+        <p></p>
+        <hr />
+      </nav>
+
+      <table>
+        <tr>
+          <td><h3 id="국기">국기</h3></td>
+          <td><h3 id="수도">수도</h3></td>
+        </tr>
+        <tr>
+          <td><img src="../images/1미국성조기.jpg" /><br />성조기</td>
+          <td><img id="amc" src="../images/2미국워싱턴.jpg" /><br />워싱턴</td>
+        </tr>
+
+        <tr>
+          <td colspan="2"><h3 id="위치">위치</h3></td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <a id="map"
+              ><iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22145710.582768776!2d-112.52091825374175!3d44.12292078560527!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54eab584e432360b%3A0x1c3bb99243deb742!2z66-46rWt!5e0!3m2!1sko!2skr!4v1685692219743!5m2!1sko!2skr"
+                width="600"
+                height="450"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe
+            ></a>
+          </td>
+        </tr>
+
+        <tr>
+          <td><h3 id="화폐">화폐</h3></td>
+          <td><h3 id="언어">언어</h3></td>
+        </tr>
+        <tr>
+          <td>달러 $</td>
+          <td>영어 English</td>
+        </tr>
+
+        <tr>
+          <td><h3 id="인구">인구</h3></td>
+          <td><h3 id="면적">면적</h3></td>
+        </tr>
+        <tr>
+          <td>3억 3,999만 6,563명 세계3위</td>
+          <td>9억 8,315만 1천㏊ 세계3위</td>
+        </tr>
+      </table>
+
+      <hr />
+      <p></p>
+    </div>
+    <script type="text/javascript">
+      $(function () {
+        $(document).on("click", "#amc", function () {
+          alert("이곳은 워싱턴DC 미국 국회의사당입니다.");
+        });
+      });
+    </script>
+  </body>
+</html>
